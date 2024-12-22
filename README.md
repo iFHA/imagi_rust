@@ -32,5 +32,8 @@ Explorar a integração de **Rust** e **WebAssembly** com tecnologias web para c
    ```
 4. Abra o arquivo HTML no navegador para interagir com a aplicação.
 
+## Demo
+Confira a aplicação em funcionamento neste link: [ImagiRust Demo](https://imagi-rust-h7o6yhy8y-ifhas-projects.vercel.app/)
+
 ## Estado do Projeto
-O projeto ainda está em desenvolvimento inicial e faz parte de um estudo sobre processamento de imagens e tecnologias web modernas. Feedbacks e sugestões são bem-vindos!
+O projeto está em estágio inicial, mas já realiza o filtro de escala de cinza (grayscale). Feedbacks e sugestões são bem-vindos!
