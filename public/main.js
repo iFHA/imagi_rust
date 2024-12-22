@@ -12,11 +12,17 @@
     }
 
     const input = document.getElementById('upload');
+    const img = document.getElementById('new-img');
     const fileReader = new FileReader();
 
     fileReader.onloadend = () => {
-        const base64 = fileReader.result.replace(/^data:image\/(png|jpeg|jpg);base64,/, '');
-        rustApp.grayscale(base64);
+        const originBase64ImgUrl = fileReader.result;
+        img.setAttribute('src', originBase64ImgUrl);
+        const base64 = originBase64ImgUrl.replace(/^data:image\/(png|jpeg|jpg);base64,/, '');
+        const newBase64ImgUrl = rustApp.grayscale(base64);
+        // exibindo imagem modificada 3 segundos após processamento
+        // só para que o usuário possa ter tempo para ver a mudança
+        setTimeout(() => img.setAttribute('src', newBase64ImgUrl), 3000)
     };
 
     input.addEventListener('change', () => {
