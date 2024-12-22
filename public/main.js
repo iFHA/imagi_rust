@@ -39,6 +39,11 @@
             alert('Selecione um filtro!');
             return;
         }
+        const isValidImage = img.getAttribute('src');
+        if(!isValidImage) {
+            alert('Selecione uma imagem!');
+            return;
+        }
         const base64 = img.getAttribute('src').replace(/^data:image\/(png|jpeg|jpg);base64,/, '');
         let newBase64ImgUrl = rustApp.apply_filter(base64, selectedFilter);
         img.setAttribute('src', newBase64ImgUrl);
